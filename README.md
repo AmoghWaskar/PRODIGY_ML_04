@@ -1,125 +1,103 @@
-Hand Gesture Recognition System
+# Hand Gesture Recognition System
 
-A deep learning based Hand Gesture Recognition system built using Convolutional Neural Networks (CNN) and the LeapGestRecog dataset.
-The system classifies hand gestures and enables intuitive human–computer interaction.
+A deep learning-based computer vision system that recognizes and classifies hand gestures using Convolutional Neural Networks (CNN).  
+This project demonstrates the practical implementation of image classification for gesture-based human–computer interaction.
 
-Overview
+---
 
-This project implements an image classification model capable of recognizing 10 different hand gestures from infrared images.
-It also supports webcam-based gesture prediction for real-time interaction.
+## Project Objective
 
-The project was developed as part of an AI/ML internship task.
+To develop a robust gesture recognition model capable of accurately identifying hand gestures from image data and enabling real-time gesture-based control systems.
 
-Dataset
+The system bridges computer vision with interactive AI applications.
 
-Dataset used: LeapGestRecog
-Source: Kaggle
-Total Images: 20,000+
-Classes: 10 hand gestures
+---
 
-Each class represents a unique gesture captured using a Leap Motion sensor.
+## Dataset
 
-Technologies Used
+**Dataset:** LeapGestRecog  
+**Source:** Kaggle  
+**Total Images:** 20,000+  
+**Classes:** 10 hand gestures  
+**Data Type:** Infrared grayscale images captured using a Leap Motion sensor  
 
-Python
+Each class represents a distinct static hand gesture.
 
-TensorFlow / Keras
+---
 
-OpenCV
+## Technical Stack
 
-NumPy
+- Python  
+- TensorFlow / Keras  
+- OpenCV  
+- NumPy  
+- Matplotlib  
+- Scikit-learn  
 
-Matplotlib
+---
 
-Scikit-learn
+## Methodology
 
-Model Architecture
+### 1. Data Preprocessing
+- Image resizing to 128 × 128  
+- Pixel normalization (Rescaling 1/255)  
+- Data augmentation (horizontal flip, rotation, zoom)  
+- Training–validation split (80–20)
 
-The model is built using a Convolutional Neural Network with:
+### 2. Model Architecture
 
-Data Augmentation
+The CNN architecture consists of:
 
-Rescaling Layer
+- Data Augmentation Layer  
+- Rescaling Layer  
+- 3 Convolutional Layers (ReLU activation)  
+- MaxPooling Layers  
+- Dropout Regularization  
+- Fully Connected Dense Layer  
+- Softmax Output Layer (10 classes)
 
-3 Convolutional Layers
+This architecture enables hierarchical feature extraction from gesture images.
 
-MaxPooling Layers
+### 3. Model Training
 
-Dropout Regularization
+- Optimizer: Adam  
+- Loss Function: Sparse Categorical Crossentropy  
+- Batch Size: 32  
+- Epochs: 15  
+- Validation Monitoring  
 
-Fully Connected Dense Layers
+---
 
-Softmax Output Layer (10 Classes)
+## Performance Metrics
 
-Training Details
+- Training Accuracy: ~95%  
+- Validation Accuracy: ~92–95%  
 
-Image Size: 128x128
+Evaluation methods include:
 
-Batch Size: 32
+- Confusion Matrix  
+- Classification Report  
+- Precision  
+- Recall  
+- F1-Score  
 
-Optimizer: Adam
+The model demonstrates strong generalization across gesture classes.
 
-Loss Function: Sparse Categorical Crossentropy
+---
 
-Epochs: 15
+## Real-Time Gesture Detection
 
-Performance
+The trained model supports webcam-based gesture prediction using OpenCV.
 
-Training Accuracy: ~95%
+### Workflow:
+1. Capture frame from webcam  
+2. Resize and normalize image  
+3. Perform model inference  
+4. Display predicted gesture label  
 
-Validation Accuracy: ~92–95%
+This enables real-time interactive applications.
 
-Model evaluation includes:
+---
 
-Confusion Matrix
+## Project Structure
 
-Classification Report
-
-Precision, Recall, F1-Score
-
-Features
-
-Static image gesture classification
-
-Real-time webcam gesture detection
-
-Performance visualization
-
-Model saving and loading support
-
-Project Structure
-Hand-Gesture-Recognition/
-│
-├── dataset/
-├── gesture_model.h5
-├── training_notebook.ipynb
-├── webcam_detection.py
-└── README.md
-
-How to Run
-
-Clone the repository
-
-Install required dependencies:
-
-pip install tensorflow opencv-python numpy matplotlib scikit-learn
-
-
-Train the model or load the saved model
-
-Run webcam_detection.py for real-time prediction
-
-Future Improvements
-
-Transfer Learning using MobileNetV2
-
-LSTM for dynamic gesture recognition
-
-Web deployment using Streamlit
-
-Mobile application integration
-
-Author
-
-Amogh Waskar
-Artificial Intelligence & Machine Learning Enthusiast
