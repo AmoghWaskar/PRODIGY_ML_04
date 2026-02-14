@@ -99,5 +99,53 @@ This enables real-time interactive applications.
 
 ---
 
-## Project Structure
+## Key Features
+
+- End-to-end deep learning pipeline  
+- Data augmentation for improved generalization  
+- Detailed model evaluation  
+- Real-time prediction capability  
+- Clean and modular code structure  
+
+---
+
+## Potential Applications
+
+- Touchless control systems  
+- Virtual reality interaction  
+- Smart home automation  
+- Assistive technologies  
+- Robotics and automation  
+
+---
+
+## Future Enhancements
+
+- Transfer Learning (MobileNetV2 / ResNet)  
+- LSTM-based dynamic gesture recognition  
+- Deployment using Streamlit or Flask  
+- Edge-device optimization  
+- Integration with IoT systems  
+
+---
+
+## Learning Outcomes
+
+This project strengthened practical understanding of:
+
+- Convolutional Neural Networks  
+- Image preprocessing techniques  
+- Model evaluation strategies  
+- Real-time inference pipelines  
+- Applied computer vision systems  
+
+---
+
+## Author
+
+**Amogh Waskar**  
+Artificial Intelligence & Machine Learning Enthusiast  
+Focused on building intelligent systems that merge vision and interaction.
+
+
 
